@@ -1,0 +1,43 @@
+{
+  "name": "@rmariuzzo/node-typescript-template",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "https://github.com/rmariuzzo/{repo}#readme",
+  "author": "Rubens Mariuzzo <rubens@mariuzzo.com>",
+  "license": "MIT",
+  "keywords": [],
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmariuzzo/{repo}.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rmariuzzo/{repo}/issues"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postversion": "git push origin && git push origin --tags"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^14.0.23",
+    "eslint": "^7.4.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
