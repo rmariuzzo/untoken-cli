@@ -1,6 +1,6 @@
 {
   "name": "untoken-cli",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A token replacement CLI tool for text.",
   "homepage": "https://github.com/rmariuzzo/untoken-cli#readme",
   "author": "Rubens Mariuzzo <rubens@mariuzzo.com>",
