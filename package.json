@@ -1,34 +1,59 @@
 {
-  "name": "@rmariuzzo/node-typescript-template",
+  "name": "untoken-cli",
   "version": "0.0.0",
-  "description": "",
-  "homepage": "https://github.com/rmariuzzo/{repo}#readme",
+  "description": "A token replacement CLI tool for text.",
+  "homepage": "https://github.com/rmariuzzo/untoken-cli#readme",
   "author": "Rubens Mariuzzo <rubens@mariuzzo.com>",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "token",
+    "untoken",
+    "replace",
+    "replacement",
+    "template",
+    "cli"
+  ],
   "main": "dist/index.js",
   "files": [
-    "dist"
+    "dist",
+    "bin.js"
   ],
+  "bin": {
+    "untoken": "bin.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rmariuzzo/{repo}.git"
+    "url": "git+https://github.com/rmariuzzo/untoken-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/rmariuzzo/{repo}/issues"
+    "url": "https://github.com/rmariuzzo/untoken-cli/issues"
   },
   "scripts": {
     "build": "tsc --project tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "postversion": "git push origin && git push origin --tags"
   },
-  "dependencies": {},
+  "dependencies": {
+    "untoken": "0.0.2",
+    "yargs-parser": "^18.1.3"
+  },
   "devDependencies": {
+    "@types/jest": "^26.0.4",
     "@types/node": "^14.0.23",
-    "eslint": "^7.4.0",
+    "@types/tmp": "^0.2.0",
+    "@types/yargs-parser": "^15.0.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "execa": "^4.0.3",
     "husky": "^4.2.5",
+    "jest": "^26.1.0",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
+    "tmp": "^0.2.1",
+    "ts-jest": "^26.1.2",
+    "ts-node": "^8.10.2",
     "typescript": "^3.9.6"
   },
   "husky": {
